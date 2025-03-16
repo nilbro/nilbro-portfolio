@@ -6,6 +6,9 @@ const Skills = () => {
         <section id="skills" className="py-12 bg-ide-background">
             <div className="container mx-auto px-4">
                 <h2 className="text-2xl font-bold text-ide-yellow mb-8">Skills and Technologies</h2>
+                <p className="text-center text-lg text-ide-foreground mb-8 leading-relaxed">
+                    I'm a trained DBA with a career dedicated to working with data products. I taught myself data science along the way, and Python is my primary language. Recently, I've developed a strong interest in DevOps and cloud technologies and want to grow further in that direction.
+                </p>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                     <div className="flex flex-col items-center">
                         <FaPython className="text-6xl text-ide-blue mb-2" />
