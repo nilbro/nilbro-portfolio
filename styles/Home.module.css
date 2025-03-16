@@ -1,0 +1,39 @@
+.container {
+    @apply font-sans m-0 p-0 box-border;
+}
+
+.header {
+    @apply bg-gray-800 dark:bg-gray-900 text-white p-4 text-center;
+}
+
+.nav ul {
+    @apply list-none p-0;
+}
+
+.nav ul li {
+    @apply inline m-0 mx-4;
+}
+
+.nav ul li a {
+    @apply text-white no-underline;
+}
+
+.main {
+    @apply p-8;
+}
+
+.section {
+    @apply mb-8;
+}
+
+.footer {
+    @apply bg-gray-800 dark:bg-gray-900 text-white p-4 text-center fixed bottom-0 w-full;
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
