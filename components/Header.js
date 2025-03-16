@@ -6,7 +6,7 @@ const Header = () => {
             <div className="container flex justify-between items-center">
                 <h1 className="text-2xl font-dancing-script">nilbro</h1>
                 <a
-                    href="/path/to/your-cv.pdf"
+                    href="docs/cv_patra_nilabhra.pdf"
                     download="Nilabhra_Patra_CV.pdf"
                     className="flex items-center bg-ide-blue text-ide-white px-4 py-2 rounded hover:bg-ide-purple transition duration-300"
                 >
