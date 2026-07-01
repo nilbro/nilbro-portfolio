@@ -3,7 +3,7 @@ const Footer = () => {
         <footer className="bg-ide-background text-ide-white p-4 text-center">
             <div className="container mx-auto">
                 <div className="flex justify-center space-x-4 mb-4">
-                    <a href="https://www.linkedin.com/in/nilabhra-p-0092445a/" target="_blank" rel="noopener noreferrer" className="text-ide-blue hover:text-ide-purple">
+                    <a href="https://www.linkedin.com/in/nilbro/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-ide-blue hover:text-ide-purple">
                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.25h-3v-5.5c0-1.1-.9-2-2-2s-2 .9-2 2v5.5h-3v-10h3v1.5c.88-1.32 2.34-2.5 4-2.5 2.21 0 4 1.79 4 4v7z"/>
                         </svg>
