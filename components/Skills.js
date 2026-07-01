@@ -1,127 +1,99 @@
-import { FaPython, FaAws, FaGoogle, FaDocker, FaJava, FaDatabase, FaGitlab } from 'react-icons/fa';
-import { SiFastapi, SiTerraform, SiGnubash, SiPostgresql, SiSqlalchemy, SiCloudflare, SiPoetry, SiPytest, SiMongodb, SiInfluxdb, SiGrafana, SiKubernetes, SiApachehive, SiApachespark, SiApachekafka, SiScikitlearn, SiPytorch, SiMlflow, SiDatabricks, SiUv, SiPandas } from 'react-icons/si';
+import { FaPython, FaAws, FaGoogle, FaDocker, FaDatabase, FaGitlab, FaFlask } from 'react-icons/fa';
+import {
+    SiFastapi, SiTerraform, SiGnubash, SiPostgresql, SiSqlalchemy, SiPytest, SiMongodb,
+    SiInfluxdb, SiGrafana, SiKubernetes, SiApachespark, SiApachekafka, SiTensorflow,
+    SiPytorch, SiMlflow, SiDatabricks, SiUv, SiPandas, SiSnowflake, SiRedis, SiDatadog,
+    SiGraphql, SiPydantic, SiNvidia, SiClaude,
+} from 'react-icons/si';
+
+const groups = [
+    {
+        title: 'Languages',
+        skills: [
+            { icon: <FaPython className="text-ide-blue" />, name: 'Python' },
+            { icon: <FaDatabase className="text-ide-blue" />, name: 'SQL' },
+            { icon: <SiGnubash className="text-ide-green" />, name: 'Bash' },
+        ],
+    },
+    {
+        title: 'Cloud & Infrastructure',
+        skills: [
+            { icon: <FaAws className="text-ide-orange" />, name: 'AWS' },
+            { icon: <FaGoogle className="text-ide-blue" />, name: 'GCP' },
+            { icon: <SiTerraform className="text-ide-purple" />, name: 'Terraform' },
+            { icon: <FaDocker className="text-ide-purple" />, name: 'Docker' },
+            { icon: <SiKubernetes className="text-ide-blue" />, name: 'Kubernetes' },
+            { icon: <FaGitlab className="text-ide-orange" />, name: 'GitLab CI' },
+        ],
+    },
+    {
+        title: 'ML & Data Science',
+        skills: [
+            { icon: <SiPytorch className="text-ide-purple" />, name: 'PyTorch' },
+            { icon: <SiTensorflow className="text-ide-orange" />, name: 'TensorFlow' },
+            { icon: <SiMlflow className="text-ide-blue" />, name: 'MLflow' },
+            { icon: <SiNvidia className="text-ide-green" />, name: 'Triton' },
+            { icon: <SiPandas className="text-ide-purple" />, name: 'Pandas' },
+            { icon: <FaFlask className="text-ide-green" />, name: 'A/B Testing' },
+        ],
+    },
+    {
+        title: 'Data & Streaming',
+        skills: [
+            { icon: <SiApachekafka className="text-ide-orange" />, name: 'Kafka' },
+            { icon: <SiApachespark className="text-ide-green" />, name: 'PySpark' },
+            { icon: <SiSnowflake className="text-ide-blue" />, name: 'Snowflake' },
+            { icon: <SiDatabricks className="text-ide-green" />, name: 'Databricks' },
+        ],
+    },
+    {
+        title: 'Backend & Storage',
+        skills: [
+            { icon: <SiFastapi className="text-ide-green" />, name: 'FastAPI' },
+            { icon: <SiSqlalchemy className="text-ide-red" />, name: 'SQLAlchemy' },
+            { icon: <SiPydantic className="text-ide-red" />, name: 'Pydantic' },
+            { icon: <SiGraphql className="text-ide-purple" />, name: 'GraphQL' },
+            { icon: <SiPostgresql className="text-ide-blue" />, name: 'PostgreSQL' },
+            { icon: <SiMongodb className="text-ide-green" />, name: 'MongoDB' },
+            { icon: <SiRedis className="text-ide-red" />, name: 'Redis' },
+        ],
+    },
+    {
+        title: 'Observability & Tooling',
+        skills: [
+            { icon: <SiDatadog className="text-ide-purple" />, name: 'Datadog' },
+            { icon: <SiGrafana className="text-ide-orange" />, name: 'Grafana' },
+            { icon: <SiInfluxdb className="text-ide-purple" />, name: 'InfluxDB' },
+            { icon: <SiPytest className="text-ide-purple" />, name: 'Pytest' },
+            { icon: <SiUv className="text-ide-green" />, name: 'uv' },
+            { icon: <SiClaude className="text-ide-orange" />, name: 'Claude Code' },
+        ],
+    },
+];
 
 const Skills = () => {
     return (
         <section id="skills" className="py-12 bg-ide-background">
             <div className="container mx-auto px-4">
-                <h2 className="text-2xl font-bold text-ide-yellow mb-8">Skills and Technologies</h2>
-                <p className="text-center text-lg text-ide-foreground mb-8 leading-relaxed">
-                    I am a trained DBA with a career dedicated to working with data products. I taught myself data science along the way, and Python is my primary language. Recently, I have developed a strong interest in DevOps and cloud technologies and want to grow further in that direction.
-                </p>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                    <div className="flex flex-col items-center">
-                        <FaPython className="text-6xl text-ide-blue mb-2" />
-                        <p className="text-ide-white">Python</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <FaJava className="text-6xl text-ide-orange mb-2" />
-                        <p className="text-ide-white">Java</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <FaDatabase className="text-6xl text-ide-blue mb-2" />
-                        <p className="text-ide-white">SQL</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiGnubash className="text-6xl text-ide-green mb-2" />
-                        <p className="text-ide-white">Bash</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiFastapi className="text-6xl text-ide-green mb-2" />
-                        <p className="text-ide-white">FastAPI</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <FaAws className="text-6xl text-ide-orange mb-2" />
-                        <p className="text-ide-white">AWS</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <FaGoogle className="text-6xl text-ide-blue mb-2" />
-                        <p className="text-ide-white">GCP</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiSqlalchemy className="text-6xl text-ide-red mb-2" />
-                        <p className="text-ide-white">SQLAlchemy</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiTerraform className="text-6xl text-ide-purple mb-2" />
-                        <p className="text-ide-white">Terraform</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiCloudflare className="text-6xl text-ide-orange mb-2" />
-                        <p className="text-ide-white">CloudFormation</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiPostgresql className="text-6xl text-ide-blue mb-2" />
-                        <p className="text-ide-white">PostgreSQL</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiPoetry className="text-6xl text-ide-green mb-2" />
-                        <p className="text-ide-white">Poetry</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiUv className="text-6xl text-ide-green mb-2" />
-                        <p className="text-ide-white">uv</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiPytest className="text-6xl text-ide-purple mb-2" />
-                        <p className="text-ide-white">Pytest</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiMongodb className="text-6xl text-ide-green mb-2" />
-                        <p className="text-ide-white">MongoDB</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <FaDocker className="text-6xl text-ide-purple mb-2" />
-                        <p className="text-ide-white">Docker</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiKubernetes className="text-6xl text-ide-blue mb-2" />
-                        <p className="text-ide-white">Kubernetes</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiApachespark className="text-6xl text-ide-green mb-2" />
-                        <p className="text-ide-white">PySpark</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiApachekafka className="text-6xl text-ide-orange mb-2" />
-                        <p className="text-ide-white">Kafka</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiApachehive className="text-6xl text-ide-yellow mb-2" />
-                        <p className="text-ide-white">Hive</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiInfluxdb className="text-6xl text-ide-purple mb-2" />
-                        <p className="text-ide-white">InfluxDB</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiGrafana className="text-6xl text-ide-orange mb-2" />
-                        <p className="text-ide-white">Grafana</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiScikitlearn className="text-6xl text-ide-green mb-2" />
-                        <p className="text-ide-white">Scikit-learn</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiPytorch className="text-6xl text-ide-purple mb-2" />
-                        <p className="text-ide-white">PyTorch</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiMlflow className="text-6xl text-ide-blue mb-2" />
-                        <p className="text-ide-white">MLflow</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiDatabricks className="text-6xl text-ide-green mb-2" />
-                        <p className="text-ide-white">Databricks</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <FaGitlab className="text-6xl text-ide-orange mb-2" />
-                        <p className="text-ide-white">Gitlab</p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <SiPandas className="text-6xl text-ide-purple mb-2" />
-                        <p className="text-ide-white">Pandas</p>
-                    </div>
+                <h2 className="text-2xl font-bold text-ide-yellow mb-2">Skills &amp; Technologies</h2>
+                <p className="text-ide-muted mb-8">Technologies I&apos;ve built with, run in production, or just explored. Grouped by where they live.</p>
+
+                <div className="space-y-8">
+                    {groups.map((group) => (
+                        <div key={group.title}>
+                            <h3 className="text-sm font-semibold uppercase tracking-wider text-ide-green mb-4">
+                                {group.title}
+                            </h3>
+                            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
+                                {group.skills.map((skill) => (
+                                    <div key={skill.name} className="flex flex-col items-center text-center">
+                                        <span className="text-4xl mb-2">{skill.icon}</span>
+                                        <p className="text-xs text-ide-white">{skill.name}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
